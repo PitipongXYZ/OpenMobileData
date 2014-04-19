@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
 
 			Object[] pArg = new Object[2];
 			pArg[0] = getApplicationContext().getPackageName();
-			pArg[1] = true;
+			pArg[1] = enabled;
 			setMobileDataEnabledMethod.setAccessible(true);
 			setMobileDataEnabledMethod.invoke(iConnectivityManager, pArg);
 		} catch (ClassNotFoundException e) {
